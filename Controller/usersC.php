@@ -1,6 +1,6 @@
 <?php
 include '..\config.php';
-include '..\models\user.php';
+include '..\Model\user.php';
 class usersC {
     function afficheruser(){
         $sql="SELECT * FROM users";
@@ -160,6 +160,11 @@ function afficherRechercheUser($rech){
         die('Erreur: '.$e->getMessage());
     }	
 }
+
+
+
+
+
 
 
 

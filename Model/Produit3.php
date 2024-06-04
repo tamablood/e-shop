@@ -1,7 +1,6 @@
 <?php
 
-
-class Produit{
+class Produit3{
     private int $id;
     private string $nom;
     private float $prix;

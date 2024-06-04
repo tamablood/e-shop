@@ -1,7 +1,7 @@
 <?php
-include '../Controller/ProduitC.php';
-$ProduitC = new ProduitC();
-$listeProduits = $ProduitC->afficherproduit();
+include '../Controller/Produit3C.php';
+$Produit3C = new Produit3C();
+$listeProduits  = $Produit3C->afficherproduit3();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $listeProduits = $ProduitC->afficherproduit();
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Product List</title>
+    <title>Liste de Produits</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -88,37 +88,33 @@ $listeProduits = $ProduitC->afficherproduit();
                     <thead>
                         <tr>
                             <th>id</th>
-                            <th>nom</th>
+                            <th>name</th>
                             <th>price</th>
                             <th>image</th>
                             
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($listeProduits as $Produit) { ?>
+                        <?php foreach ($listeProduits as $Produit3) { ?>
                             <tr>
-                                <td><?php echo $Produit['id']; ?></td>
-                                <td><?php echo $Produit['nom']; ?></td>
-                                <td><?php echo $Produit['prix']; ?></td>
-                                <td><?php echo $Produit['image']; ?></td>
-                                <td><a href="supprimerproduit.php?id=<?php echo $Produit['id']; ?>" class="btn">delete</a></td>
-                                <td><a href="editProduit.php?id=<?php echo $Produit['id']; ?>" class="btn">Edit</a></td>
-                                
-
+                                <td><?php echo $Produit3['id']; ?></td>
+                                <td><?php echo $Produit3['nom']; ?></td>
+                                <td><?php echo $Produit3['prix']; ?></td>
+                                <td><?php echo $Produit3['image']; ?></td>
+                                <td><a href="supprimerproduit3.php?id=<?php echo $Produit3['id']; ?>" class="btn">delete</a></td>
+                                <td><a href="editProduit3.php?id=<?php echo $Produit3['id']; ?>" class="btn">Edit</a></td>
 
 
                             </tr>
                         <?php } ?>
                     </tbody>
-                    <td>
-                         <td><a href="afficherProduit3.php" class="btn">Product 3</a></td>
-                        <td><a href="afficherProduit2.php" class="btn">Product 2</a></td>
-                        <td><a href="ajouterProduit.php" class="btn">Add</a></td>
-                        <td><a href="index.php" class="btn">Shop</a></td>
-                    </td>
                 </table>
             </div>
         </div>
     </div>
+    <a href="ajouterProduit3.php" class="btn">Add</a>
+    <a href="afficherProduit2.php" class="btn">Product 2</a>
+    <a href="afficherProduit.php" class="btn">Product </a>
+    <a href="index.php" class="btn">Shop</a>
 </body>
 </html>

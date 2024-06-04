@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de Connexion</title>
+    <title>Connection Form</title>
     <style>
         body {
             margin: 0;
@@ -72,7 +72,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>ArabSoft Ciné</h2>
+        <h2>Registration form</h2>
 
         <?php
     if (isset($_GET['error']) && $_GET['error'] === 'incorrect') {
@@ -85,15 +85,15 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="password">Mot de passe</label>
+                <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="g-recaptcha" data-sitekey="6LeGNzUjAAAAAPye1rqpJ2zACIyKXCT_xkMduHZR"></div> 
-            <input type="submit" value="Se connecter">
+            <input type="submit" value="Enter">
            
         </form>
       
-        <p class="form-footer">Pas encore inscrit ? <a href="signupFront.php">S'inscrire</a></p>
+        <p class="form-footer">Not yet registered ? <a href="signupFront.php">Sign up</a></p>
     </div>
 </body>
 </html>
